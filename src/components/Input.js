@@ -8,10 +8,10 @@ class Input extends Component {
     return (
       <input
         type="number"
-        class="form-control mb-3"
+        className="form-control mb-3"
         id="input"
         disabled
-        value="0"
+        defaultValue={0}
       />
     );
   }
