@@ -11,25 +11,35 @@ class App extends Component {
     value: 0,
   };
 
-  increaseValue = () => {
-    console.log("increaseValue");
+  changeValue = (btnId) => {
     this.setState((state) => {
-      return {
-        value: this.state.value + 1,
-      };
+      switch (btnId) {
+        case "btnMinus":
+          return {
+            value: this.state.value - 1,
+          };
+        case "btnPlus":
+          return {
+            value: this.state.value + 1,
+          };
+        case "btnReset":
+          return {
+            value: 0,
+          };
+        default:
+          return {
+            value: state.value,
+          };
+      }
     });
   };
-
-  decreaseValue = () => {};
-
-  resetValue = () => {};
 
   render() {
     return (
       <div className="App">
         <Header />
-        <Input />
-        <BtnGroup increaseValue={this.increaseValue} />
+        <Input value={this.state.value} />
+        <BtnGroup changeValue={this.changeValue} />
       </div>
     );
   }

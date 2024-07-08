@@ -11,7 +11,8 @@ class Input extends Component {
         className="form-control mb-3"
         id="input"
         disabled
-        defaultValue={0}
+        // defaultValue={0}
+        value={this.props.value}
       />
     );
   }
