@@ -1,8 +1,17 @@
+/* ----------------------------------------------------------------
+  APP
+---------------------------------------------------------------- */
+import { Component } from "react";
+import Header from "./components/Header";
+import Input from "./components/Input";
+import BtnGroup from "./components/ButtonsGroup";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Header />
+      <Input />
+      <BtnGroup />
     </div>
   );
 }
