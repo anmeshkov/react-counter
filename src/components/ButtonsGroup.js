@@ -22,6 +22,7 @@ class BtnGroup extends Component {
           type="button"
           className="btn btn-outline-primary"
           id={btn.id}
+          key={btn.id}
         >
           {btn.name}
         </button>
